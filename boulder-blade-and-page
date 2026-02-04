@@ -1,0 +1,96 @@
+import random
+print("Welcome to Boulder, Blade, and Page: the Rock Paper Scissors game!")
+# Rock, Paper, Scissors
+rock = r'''
+      _______
+    /        \
+   /  _    _  \
+  |  / \  / \  |
+  |  \__  __/  |
+   \    ~~    /
+    \________/
+'''
+
+paper = r'''
+     _________________
+    |                /|
+    |               / |
+    |              /  |
+    |             /   |
+    |            /____|
+    |            |    |
+    |____________|____|
+'''
+
+scissors = r'''
+      _       _
+     ( )     ( )
+      \ \   / /
+       \ \ / /
+        \ X /
+       / / \ \
+      / /   \ \
+     /_/     \_\
+'''
+
+choices = ["Rock", "Paper", "Scissors"]
+game_round = 1
+player_points = 0
+enemy_points = 0
+
+while game_round <= 3:
+    player_choice = input(f"Round {game_round}: What do you choose? (Rock, Paper, Scissors)")
+    enemy_choice = random.choice(choices)
+
+    if player_choice == "Rock":
+        print("Player:")
+        print(rock)
+    elif player_choice == "Paper":
+        print("Player:")
+        print(paper)
+    elif player_choice == "Scissors":
+        print("Player:")
+        print(scissors)
+    else:
+        print("Invalid choice!")
+
+    if enemy_choice == "Rock":
+        print("Enemy:")
+        print(rock)
+    elif enemy_choice == "Paper":
+        print("Enemy:")
+        print(paper)
+    else:
+        print("Enemy:")
+        print(scissors)
+
+    if player_choice == enemy_choice:
+        print("It's a draw!")
+    elif player_choice == "Rock" and enemy_choice == "Scissors":
+        print("You win!")
+        player_points += 1
+    elif player_choice == "Rock" and enemy_choice == "Paper":
+        print("You lose!")
+        enemy_points += 1
+    elif player_choice == "Scissors" and enemy_choice == "Paper":
+        print("You win!")
+        player_points += 1
+    elif player_choice == "Scissors" and enemy_choice == "Rock":
+        print("You lose!")
+        enemy_points += 1
+    elif player_choice == "Paper" and enemy_choice == "Rock":
+        print("You win!")
+        player_points += 1
+    elif player_choice == "Paper" and enemy_choice == "Scissors":
+        print("You lose!")
+        enemy_points += 1
+    game_round += 1
+
+if player_points == enemy_points:
+    print("Congratulations! You win!")
+else:
+    print("Game Over...You lose!")
+
+
+
+
