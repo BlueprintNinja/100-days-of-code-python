@@ -22,7 +22,7 @@ password = ""
 # --- PASSWORD GENERATION LOOP ---
 # We loop through the total number of characters needed.
 # Note: This logic builds the password in a specific order (Letter -> Symbol -> Number)
-for num in range(0, nr_total + 1):
+for num in range(0, nr_total):
     
     # Check if user still needs letters, add one, and decrease the count
     if nr_letters > 0:
