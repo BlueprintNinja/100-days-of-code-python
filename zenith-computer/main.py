@@ -36,7 +36,7 @@ computer_functions["*"] = multiply
 computer_functions["/"] = divide
 
 # Get the initial starting value
-first = int(input("What is your first number? "))
+first = float(input("What is your first number? "))
 
 # Main application loop
 while continued:
@@ -47,7 +47,7 @@ while continued:
         if operator not in operators:
             print("Please enter a valid operator")
 
-    second = int(input("What is your second number? "))
+    second = float(input("What is your second number? "))
 
     # Execute the calculation by fetching the function from the dictionary
     # and immediately calling it with 'first' and 'second'
